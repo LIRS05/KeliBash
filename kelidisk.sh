@@ -26,7 +26,7 @@ df -h
 ADMIN="l.iervasi@keliweb.it"
 
 # impostazione soglia massima
-THRESHOLD=90
+THRESHOLD=99
 
 #hostname
 HOSTNAME=$(hostname)
@@ -37,7 +37,7 @@ MAIL=/usr/bin/mail
 #email di archiviazione alert 
 EMAIL="l.iervasi@keliweb.it"
 
-for line in $(df -hP | egrep '^/dev/' | awk '{ print $6 "_:_" $5 }')
+for line in $(df -hP | egrep '^/dev/disk1s1' | awk '{ print $6 "_:_" $5 }')
 do
 
 part=$(echo "$line" | awk -F"_:_" '{ print $1 }')
