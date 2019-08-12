@@ -12,15 +12,21 @@ echo "
                                  
 "
 
+echo "
+########################################################################
+#                                                                      #
+#                          CONTROLLO DISCO                             #
+#                                                                      #
+########################################################################
+
+"
 #Spazio su disco
 df -h
-
-
 #sysadmin email account
 ADMIN="l.iervasi@keliweb.it"
 
 # impostazione soglia massima
-THRESHOLD=5
+THRESHOLD=90
 
 #hostname
 HOSTNAME=$(hostname)
